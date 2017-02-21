@@ -18,21 +18,20 @@ for file in food_11_train_data:
     label = file.split('/')[-1].split('_')[0]
     file = file
     file_names.append(file)
-    labels.append(label)
+    labels.append('f11'+ label)
 
 for file in food_11_test_data:
     label = file.split('/')[-1].split('_')[0]
     file = file
     file_names.append(file)
-    labels.append(label)
+    labels.append('f11'+ label)
 
 for file in food_11_val_data:
     label = file.split('/')[-1].split('_')[0]
     file = file
     file_names.append(file)
-    labels.append(label)
+    labels.append('f11'+ label)
 
-counts = Counter(labels)
 df = pd.DataFrame({
         'file': file_names,
         'label': labels
