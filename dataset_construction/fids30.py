@@ -1,26 +1,13 @@
-
-# coding: utf-8
-
-# In[1]:
+# process dataset FIDS30 http://data.vicos.si/datasets/FIDS30/FIDS30.zip
 
 import pandas as pd
 import numpy as np
 import glob
 from matplotlib import pyplot
 
-
-# In[2]:
-
 labels = []
 image_files = []
-
-
-# In[9]:
-
 folders = glob.glob('FIDS30/*')
-
-
-# In[15]:
 
 for i,f in enumerate(folders):
     fruit = not f.split('.')[-1] == 'txt'
@@ -30,20 +17,6 @@ for i,f in enumerate(folders):
         for image in f_glob:
             labels.append(label)
             image_files.append(image)
-        
 
-
-# In[19]:
-
-df = pd.DataFrame({'label': labels, 'file': image_files})
-
-
-# In[21]:
-
+df = pd.DataFrame({'label' : labels, 'file': image_files})
 df.to_csv('fids30.csv')
-
-
-# In[ ]:
-
-
-
