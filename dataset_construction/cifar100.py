@@ -30,10 +30,10 @@ for i, each in enumerate(labels_to_be_used):
 
 for i, each in enumerate(labels_to_be_used):
     cifar100_train_data_path = 'cifar100/coarse/train/fruit_and_vegetables/'
-    cifar100_train_data_path = cifar100_test_data_path + each + '/'
-    path = os.getcwd() + '/' + cifar100_test_data_path
+    cifar100_train_data_path = cifar100_train_data_path + each + '/'
+    path = os.getcwd() + '/' + cifar100_train_data_path
     for filename in os.listdir(path):
-        image_files.append(cifar100_test_data_path + filename)
+        image_files.append(cifar100_train_data_path + filename)
         labels.append('cifar100_' + str(i))
 # # In[19]:
 
