@@ -1,0 +1,1 @@
+tar -zxvf cifar100.tar.gz

@@ -1,2 +1,7 @@
 *.pyc
-*.DS_Store
+.DS_Store
+*.zip
+cifar100
+FIDS30
+food-11
+*.tar.gz
