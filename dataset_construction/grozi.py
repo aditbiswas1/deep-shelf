@@ -8,7 +8,6 @@ from matplotlib import pyplot as plt
 from collections import Counter
 import numpy as np
 import glob
-get_ipython().magic('matplotlib inline')
 
 
 # In[2]:
@@ -44,13 +43,16 @@ for i,folder in enumerate(in_vitro_data):
 
 # In[6]:
 
+in_sito_images = []
+in_sito_labels = []
+
 for i,folder in enumerate(in_sito_data):
     label = folder.split('/')[-1]
     folder_glob = glob.glob(folder+'/video/*')
     for im in folder_glob:
         if not check_if_db(im):
-            images.append(im)
-            labels.append(prefix+label)
+            in_sito_images.append(im)
+            in_sito_labels.append(prefix+label)
 
 
 # In[7]:
@@ -69,11 +71,14 @@ df = pd.DataFrame({
         'file': images
     })
 
-
+df2 = pd.DataFrame({
+        'label': in_sito_labels,
+        'file': in_sito_images
+    })
 # In[14]:
 
 df.to_csv('grozi.csv')
-
+df2.to_csv('grozi_in_sito.csv')
 
 # In[ ]:
 
