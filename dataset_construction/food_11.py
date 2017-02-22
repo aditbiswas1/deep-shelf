@@ -15,19 +15,19 @@ labels = []
 file_names = []
 
 for file in food_11_train_data:
-    label = file.split('/')[-1].split('_')[0]
+    label = 'food11_' + file.split('/')[-1].split('_')[0]
     file = file
     file_names.append(file)
     labels.append(label)
 
 for file in food_11_test_data:
-    label = file.split('/')[-1].split('_')[0]
+    label = 'food11_' + file.split('/')[-1].split('_')[0]
     file = file
     file_names.append(file)
     labels.append(label)
 
 for file in food_11_val_data:
-    label = file.split('/')[-1].split('_')[0]
+    label = 'food11_' + file.split('/')[-1].split('_')[0]
     file = file
     file_names.append(file)
     labels.append(label)

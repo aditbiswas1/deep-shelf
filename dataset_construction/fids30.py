@@ -25,7 +25,7 @@ folders = glob.glob('FIDS30/*')
 for i,f in enumerate(folders):
     fruit = not f.split('.')[-1] == 'txt'
     if fruit:
-        label = 'fid'+str(i)
+        label = 'fid_' + str(i)
         f_glob = glob.glob(f+'/*')
         for image in f_glob:
             labels.append(label)
@@ -35,7 +35,7 @@ for i,f in enumerate(folders):
 
 # In[19]:
 
-df = pd.DataFrame({'label' : labels, 'file': image_files})
+df = pd.DataFrame({'label': labels, 'file': image_files})
 
 
 # In[21]:

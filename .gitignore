@@ -1,2 +1,6 @@
 *.pyc
 .DS_Store
+*.zip
+cifar100
+FIDS30
+food-11
